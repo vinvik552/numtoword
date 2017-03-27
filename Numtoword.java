@@ -31,7 +31,6 @@ public static  String numToWords(int n, String s)
     // if n is non-zero
     if (n != 0)
         str += s;
- 
     return str;
 }
  
@@ -58,20 +57,25 @@ public static String convertToWords(int n)
  
     // handles digits at ones and tens places
     out += numToWords((n % 100), "");
- 
+    
     return out;
 }
  
 public  static void main(String args[])
 {
   
-    int n = 001;
- 
+    int n = 000;
+ if (n == 0)
+	 System.out.println("Zero");
     // calling the function to convert given number in words
-    System.out.println(convertToWords(n));
+ else   
+ System.out.println(convertToWords(n));
     
     int n1=12345678;
-    
+
+    if (n1 == 0)
+   	 System.out.println("Zero");
+    else
     System.out.println(convertToWords(n1));
     
 }
